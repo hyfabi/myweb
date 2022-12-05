@@ -6,14 +6,17 @@
 
 <script setup lang="ts">
 
-import {ref} from "vue";
+import { ref} from "vue";
 import * as data from "@/assets/interactives/ForegroundText.json"
+import {isForeground} from "@/assets/States";
 
 const textNow = ref<string>();
 
 wait(1, data);
 
 function rek(data : any){
+	if(!isForeground.value)
+		return;
 	if(data.text !== undefined)
 		write(data.text);
 	if(data.wait !== undefined)
