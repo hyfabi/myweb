@@ -1,0 +1,15 @@
+{
+	"text":"Why are you here?",
+	"wait":5,
+	"after":{
+		"text": "So ur still here? Ok",
+		"wait": 10,
+		"after": {
+			"text": "Please go away!!",
+			"wait": 5,
+			"after":{
+				"redirect":"https://www.google.com"
+			}
+		}
+	}
+}
