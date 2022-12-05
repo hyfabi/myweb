@@ -8,7 +8,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
 	server:{
 		host: "0.0.0.0",
-		port: 42069
+		port: 80
 	},
 	plugins: [vue(), vueJsx()],
 	resolve: {
