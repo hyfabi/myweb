@@ -1,12 +1,12 @@
 <template>
 
-	<main v-if="isForeground" v-on:mousedown="keyPressed">
+	<div v-if="isForeground" v-on:mousedown="keyPressed">
 		<div class="hehehaha">:)</div>
 		<Foreground></Foreground>
-	</main>
-	<main v-else>
+	</div>
+	<div v-else>
 		<Background></Background>
-	</main>
+	</div>
 
 </template>
 

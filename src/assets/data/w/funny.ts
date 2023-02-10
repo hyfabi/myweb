@@ -1,7 +1,6 @@
-export const weisheiten : {
-	text: string,
-	creator: string
-}[] = [
+import type Wei from "@/models/Wei";
+
+const funny : Wei[] = [
 	{
 		text: "Lieber 2 Eier in der Pfanne als 2 Pfannen in die Eier",
 		creator: "~Konfuzius"
@@ -19,7 +18,7 @@ export const weisheiten : {
 		creator: "~Random alter Mann im Internet"
 	},
 	{
-		text: "Du bist erst ein wahrer Mann\nIst dein IQ niedriger als dein Armumfang",
+		text: "Du bist erst ein wahrer Mann. Ist dein IQ niedriger als dein Armumfang",
 		creator: "~Farid Bang"
 	},
 	{
@@ -27,7 +26,7 @@ export const weisheiten : {
 		creator: "~Oliver"
 	},
 	{
-		text: "Frauen sind wie das Wetter in England. \n ...Unberechenbar...",
+		text: "Frauen sind wie das Wetter in England. ...Unberechenbar...",
 		creator: "~Luka"
 	},
 	{
@@ -48,6 +47,28 @@ export const weisheiten : {
 	},
 	{
 		text: "Ein Lüge kann die Wahrheit sein wenn man sie von einer anderen Perspektive erzählt",
-		creator: "<i>unsure...</i>"
+		creator: "unsure..."
+	},
+	{
+		text: "Wenn dein herz wirklich gebrochen wäre, dann wärst du tot. Also halts maul!",
+		creator: "~Random aus dem internet"
+	},
+	{
+		text: "Willst du, dass Leute dich im Kopf haben? Dann borg von ihnen Geld.",
+		creator: "~Random aus dem internet"
+	},
+	{
+		text: "Hast du ein Loch im Socken? Wenn NEIN, wie kommst du dann hinein?",
+		creator: "~Random aus dem internet"
+	},
+	{
+		text: "Wenn du jemanden nicht mit Intelligenz beindrucken kannst. Dann verwirre sie mit Blödsinn!",
+		creator: "~Fabian"
+	},
+	{
+		text: "Du brauchst keinen Fallschirm um Falschirmzuspringen. Nur wenn du es ein zweites mal machen willst!",
+		creator:"~Random aus dem Internet"
 	}
 ]
+
+export default funny;

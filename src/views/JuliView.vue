@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is the juli page</h1>
+  <div class="ma-auto">
+    <h1>My Little Voo what are you doingg here?</h1>
   </div>
 </template>
 
