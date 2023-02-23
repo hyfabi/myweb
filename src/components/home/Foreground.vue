@@ -1,63 +1,39 @@
 <template>
-	<div class="center">
-		<span id="text">{{textNow}}</span>
-	</div>
+  <div class="center">
+    <span id="text">{{textNow}}</span>
+    <v-btn @click="" v-for="btn in btnNow" >{{btn}}</v-btn>
+  </div>
 </template>
 
 <script setup lang="ts">
 
-import { ref} from "vue";
+import {type Ref, ref} from "vue";
 import * as data from "@/assets/interactives/ForegroundText.json"
-import {isForeground} from "@/assets/States";
+import {start} from "@/scripts/rek";
 
-const textNow = ref<string>();
+const textNow : Ref<string> = ref<string>("");
+const btnNow : Ref<string[]>= ref([])
 
-wait(1, data);
+start(data, textNow)
 
-function rek(data : any){
-	if(!isForeground.value)
-		return;
-	if(data.text !== undefined)
-		write(data.text);
-	if(data.wait !== undefined)
-		wait(data.wait, data.after)
-	if(data.redirect !== undefined)
-		redirect(data.redirect)
-}
 
-//Need "text"
-function write(text : string){
-	console.log(text)
-	textNow.value = text
-}
-
-//If "wait" => Always "after"
-function wait(time : number, data : any){
-	setTimeout(function () {
-		rek(data);
-	}, time * 1000);
-}
-
-function redirect(link : string){
-	window.location.replace(link);
-}
 
 </script>
 
 <style scoped>
 .center{
-	width: 100%;
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	text-align: center;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
 }
 
 #text{
-	font-family: Bahnschrift;
-	font-size: larger;
-	color: white;
+  font-family: Bahnschrift;
+  font-size: larger;
+  color: white;
 }
 </style>

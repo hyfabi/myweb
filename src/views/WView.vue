@@ -18,7 +18,7 @@
 import {onMounted, ref} from "vue";
 import {useRoute} from "vue-router";
 import type {WType} from "@/models/Wei";
-import Wei from "@/models/Wei";
+import type Wei from "@/models/Wei";
 
 const props = defineProps<{
   type : WType

@@ -1,7 +1,7 @@
 <template>
 
-	<div v-if="isForeground" v-on:mousedown="keyPressed">
-		<div class="hehehaha">:)</div>
+	<div v-if="isForeground">
+		<div class="hehehaha" @click="keyPressed">:)</div>
 		<Foreground></Foreground>
 	</div>
 	<div v-else>
@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import Foreground from "@/components/home/Foreground.vue";
 import Background from "@/components/home/Background.vue";
-import {isForeground} from "@/assets/States";
+import {isForeground} from "@/store/States";
 import {onMounted, ref} from "vue";
 
 let pressed = 0;

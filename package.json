@@ -1,10 +1,13 @@
 {
-  "name": "vue-project",
-  "version": "0.0.0",
+  "name": "hyfabi-web",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
+    "deploy": "vite build & firebase deploy",
+    "deploy-only": "firebase deploy",
+    "finalize": "npm run build & git add * & git commit -m 'Automatic...' & git push & npm run deploy-only",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit"

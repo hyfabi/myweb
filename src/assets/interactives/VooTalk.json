@@ -1,0 +1,93 @@
+{
+  "text": "Hello Voo what are you doing here?",
+  "choice":
+  [
+    {
+      "text": "Im just bored...",
+      "after": {
+        "text": "Well then i cant help you :/",
+        "wait": 2,
+        "after": {
+          "text": "Maybe try doing stuff?",
+          "choice":
+          [
+            {
+              "text": "Dont feel like it",
+              "after": {
+                "text": "Well get high ig...",
+                "wait": "3",
+                "after": {
+                  "redirect": "https://open.spotify.com/track/5qQ2Bnai4C9NQ1vWBl7yeX?si=47843af5844046ce"
+                }
+              }
+            },
+            {
+              "text": "No",
+              "after": {
+                "text": "Well... Did you eat today?",
+                "choice": [
+                  {
+                    "text": "No",
+                    "after": {
+                      "text": "What are you waiting for? Go eat!",
+                      "wait": 3,
+                      "after": {
+                        "redirect": "https://www.chefkoch.de/rezepte/1623741269600107/Perfekte-Pommes-frites.html"
+                      }
+                    }
+                  },
+                  {
+                    "text": "Yes",
+                    "after": {
+                      "text": "Enough?",
+                      "choice": [
+                        {
+                          "text": "Yes",
+                          "after": {
+                            "text": "Very proud off youuu! Love youu! <3 Have a great Day!"
+                          }
+                        },
+                        {
+                          "text": "No",
+                          "after": {
+                            "text": "Go eat",
+                            "wait": 3,
+                            "after": {
+                              "redirect": "https://www.chefkoch.de/rezepte/1623741269600107/Perfekte-Pommes-frites.html"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "text": "Nah u trash",
+              "after": {
+                "text": "Well fuck you!",
+                "wait": 2,
+                "after": {
+                  "redirect": "https://www.google.com/search?q=Why+is+my+mom+so+gay"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "text": "I miss you",
+      "after": {
+        "text": "Owee i miss you too. If you really do tell me please :)",
+        "choice": [{
+          "text": "Okay...",
+          "after": {
+            "redirect": "https://api.whatsapp.com/send?phone=+436802081888&text=I%20have%20written%20you"
+          }
+        }]
+      }
+    }
+  ]
+}

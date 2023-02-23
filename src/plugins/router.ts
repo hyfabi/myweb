@@ -7,7 +7,7 @@ const routes : RouteRecordRaw[] = [
     component: HomeView
   },
   {
-    path: '/julianka',
+    path: '/voo',
     component: () => import('../views/JuliView.vue')
   },
   {
@@ -15,7 +15,7 @@ const routes : RouteRecordRaw[] = [
     children: [
       {
         path: '',
-        alias: '/funny',
+        alias: 'funny',
         component: () => import('../views/WView.vue'),
         props: {
           type: "FUNNY"
@@ -34,6 +34,14 @@ const routes : RouteRecordRaw[] = [
   {
     path: '/v/:id(\\d+)*',
     component: () => import('../views/VirtualView.vue')
+  },
+  {
+    path:'/tanja',
+    component: () => import('../views/TanjaView.vue')
+  },
+  {
+    path:'/me',
+    component: () => import('../views/MeView.vue')
   }
 ]
 
