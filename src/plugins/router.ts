@@ -11,6 +11,17 @@ const routes : RouteRecordRaw[] = [
     component: () => import('../views/JuliView.vue')
   },
   {
+    path: '/test',
+    children:[
+      {
+        path: 'background',
+        alias: 'test-background1',
+        component: () => import('../views/testViews/BackGroundTestView.vue'),
+
+      }
+    ]
+  },
+  {
     path: '/w',
     children: [
       {
@@ -22,7 +33,7 @@ const routes : RouteRecordRaw[] = [
         },
       },
       {
-        path: 'actual',
+        path: '/actual',
         name: 'w',
         component: () => import('../views/WView.vue'),
         props: {

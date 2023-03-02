@@ -1,11 +1,15 @@
-import {isForeground} from "@/store/States";
 import type {Ref} from "vue";
-import {de} from "vuetify/locale";
-import {data} from "@/assets/data/voo";
+import {ref} from "vue";
 
 let textNow : Ref<string> | null = null
 let btnNow : Ref<{text: string, after: any}[]> | null = null
 let state = null;
+
+let allowNextRD : Ref<boolean> = ref(true);
+
+export function removeRD(){
+  allowNextRD.value = false;
+}
 
 export function start(data : any, textRef : Ref<string>, btnRef?: Ref<{text: string, after: any}[]>){
   wait(1, data);
@@ -42,7 +46,9 @@ function wait(time : number, data : any){
 }
 
 function redirect(link : string){
-  window.location.replace(link);
+  if(allowNextRD.value)
+    window.location.replace(link);
+  allowNextRD.value = true;
 }
 
 function choice (choices : {text: string, after: any}[]){

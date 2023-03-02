@@ -1,11 +1,13 @@
 <template>
 
 	<div v-if="isForeground">
-		<div class="hehehaha" @click="keyPressed">:)</div>
+		<div class="hehehaha position-absolute" style="z-index: 10000" @click="keyPressed()">:)</div>
 		<Foreground></Foreground>
 	</div>
 	<div v-else>
-		<Background></Background>
+      <DotLinesBackground>
+        <Background></Background>
+      </DotLinesBackground>
 	</div>
 
 </template>
@@ -15,6 +17,8 @@ import Foreground from "@/components/home/Foreground.vue";
 import Background from "@/components/home/Background.vue";
 import {isForeground} from "@/store/States";
 import {onMounted, ref} from "vue";
+import DotLinesBackground from "@/components/basic/DotLinesBackground.vue";
+import {removeRD} from "@/scripts/rek";
 
 let pressed = 0;
 
