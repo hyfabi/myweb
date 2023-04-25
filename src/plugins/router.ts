@@ -7,8 +7,8 @@ const routes : RouteRecordRaw[] = [
     component: HomeView
   },
   {
-    path: '/voo',
-    component: () => import('../views/JuliView.vue')
+    path: '/rizz',
+    component: () => import('../views/RizzView.vue')
   },
   {
     path: '/test',

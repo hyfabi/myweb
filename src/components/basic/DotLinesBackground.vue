@@ -7,10 +7,8 @@
   </div>
 </template>
 
-<script setup lang="js">
-let width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
-
-export default {
+<script lang="js">
+export default{
   name: "test",
   mounted() {
     initHeader();
@@ -18,6 +16,8 @@ export default {
     addListeners();
   }
 }
+let width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+
 
 function initHeader() {
   width = window.innerWidth;
