@@ -2,10 +2,7 @@
 
 </template>
 
-<script>
-export default {
-  name: "RandomIcons"
-}
+<script setup lang="ts">
 </script>
 
 <style scoped>
