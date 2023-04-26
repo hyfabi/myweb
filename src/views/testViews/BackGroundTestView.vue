@@ -6,18 +6,15 @@
 </template>
 
 <script setup lang="js">
-
+import {onMounted} from "vue";
 
 let width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
-export default {
-  name:"test",
-  mounted() {
-    initHeader();
-    initAnimation();
-    addListeners();
-  }
-}
+onMounted(() => {
+  initHeader();
+  initAnimation();
+  addListeners();
+})
 
 function initHeader() {
   width = window.innerWidth;

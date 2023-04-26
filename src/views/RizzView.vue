@@ -1,5 +1,6 @@
 <template>
-  <div class="ma-auto pa-2" style="font-size: 2em">
+  <RandomIcons icon-name="mdi-cancel"/>
+  <div class="ma-auto pa-2" style="font-size: 2em; background-color: rgba(0,0,0,.75)">
     <fieldset class="pa-8">
       <v-divider/>
       <div class="text-center mt-3">
@@ -21,6 +22,7 @@ import {useRoute} from "vue-router";
 import {onMounted , ref} from "vue";
 import {rizzData} from "@/assets/data/rizz";
 import type RizzRecord from "@/models/Rizz";
+import RandomIcons from "@/components/basic/RandomIcons.vue";
 
 
 const display = ref({
