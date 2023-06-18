@@ -94,7 +94,7 @@ export const rizzData : RizzRecord[] = [
     type: "Geaography Rizz"
   },
   {
-    text:"Are you money? Because I need u mroe then anything!",
+    text:"Are you money? Because I need u more then anything!",
     type: "Broke Rizz"
   },
   {
@@ -268,5 +268,13 @@ export const rizzData : RizzRecord[] = [
   {
     text: "brb just sending your photos to nasa bc your a star!",
     type: null
+  },
+  {
+    text: "Are you diarrhea or are you ready for something solid!",
+    type: "She blocks you everywhere rizz"
+  },
+  {
+    text: "Are you a shower bcz u make me wet...",
+    type: "Girl Rizz"
   }
 ];
