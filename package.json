@@ -7,7 +7,7 @@
     "build": "run-p type-check build-only",
     "deploy": "vite build & firebase deploy",
     "deploy-only": "firebase deploy",
-    "finalize": "npm run build & git add * & git commit -m 'Automatic...' & git push & npm run deploy-only",
+    "finalize": "npm run build-only & git add * & git commit -m 'Automatic...' & git push & npm run deploy-only",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit"
