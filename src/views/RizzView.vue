@@ -1,5 +1,5 @@
 <template>
-  <RandomIcons icon-name="mdi-cancel"/>
+  <RandomIcons :key="reloads" icon-name="mdi-cancel"/>
   <div class="ma-auto pa-2 text-center" style="font-size: 2em; background-color: rgba(0,0,0,.75)">
     <fieldset class="pa-8">
       <v-divider/>
@@ -12,7 +12,7 @@
       <span class="mx-auto">~Fabian</span>
     </div>
 
-    <v-btn @click="load(rizzData)" class="mt-10" color="#111111">
+    <v-btn @click="load(rizzData); reloads++" class="mt-10" color="#111111">
       Give me another one!
     </v-btn>
 
@@ -26,6 +26,7 @@ import {rizzData} from "@/assets/data/rizz";
 import type RizzRecord from "@/models/Rizz";
 import RandomIcons from "@/components/basic/RandomIcons.vue";
 
+const reloads = ref(0)
 
 const display = ref({
   text: "...",

@@ -14,8 +14,9 @@ const props = defineProps<{
 }>()
 const icons : Ref = ref([])
 
-onMounted(() => {
+onMounted(generate)
 
+function generate() {
   let count : number = Math.random() * 200 + 30
 
   for (let i = 0; i < count; i++){
@@ -25,7 +26,7 @@ onMounted(() => {
       iconName: props.iconName
     }
   }
-})
+}
 
 </script>
 
