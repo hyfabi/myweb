@@ -5,6 +5,7 @@
   </div>
 </template>
 
+<!--
 <script setup lang="js">
 
 
@@ -200,6 +201,7 @@ function getDistance(p1, p2) {
 
 
 </script>
+-->
 
 <style scoped>
 /* Header */
