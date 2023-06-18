@@ -1,6 +1,6 @@
 <template>
   <RandomIcons icon-name="mdi-cancel"/>
-  <div class="ma-auto pa-2" style="font-size: 2em; background-color: rgba(0,0,0,.75)">
+  <div class="ma-auto pa-2 text-center" style="font-size: 2em; background-color: rgba(0,0,0,.75)">
     <fieldset class="pa-8">
       <v-divider/>
       <div class="text-center mt-3">
@@ -12,7 +12,9 @@
       <span class="mx-auto">~Fabian</span>
     </div>
 
-
+    <v-btn @click="load(rizzData)" class="mt-10" color="#111111">
+      Give me another one!
+    </v-btn>
 
   </div>
 </template>

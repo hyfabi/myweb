@@ -1,7 +1,7 @@
 <template>
 <!--	<Canvas></Canvas>-->
 	<main>
-		Welcome Fellow, so you found out?
+
 	</main>
 </template>
 

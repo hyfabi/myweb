@@ -55,7 +55,7 @@ export const rizzData : RizzRecord[] = [
   },
   {
     text: "Are you anxiety because you make my heart raze!",
-    type: "Anciety Rizz"
+    type: "Anxiety Rizz"
   },
   {
     text: "Is our relationship Elsa because I cant let you go",
@@ -235,6 +235,38 @@ export const rizzData : RizzRecord[] = [
   },
   {
     text: "I would never play hide and seek with you bc someone like you is impossible to find!",
+    type: null
+  },
+  {
+    text: "Are you https? Bc without you im ://",
+    type: null
+  },
+  {
+    text: "Are you Irish? Bc Irish i was u rn",
+    type: "Trash Irish Rizz"
+  },
+  {
+    text: "'You´re' and 'your' are two different word bc 'you´re mine' and 'im yours'",
+    type: "English Rizz"
+  },
+  {
+    text: "Yor legs are like an ores cookie. I wanna split them and eat all the good stuff!",
+    type: ";)"
+  },
+  {
+    text: "Is there something wrong with my phone? By it doesent have ur number!",
+    type: null
+  },
+  {
+    text: "idk whats gotten into me but i hope its next time you!",
+    type: null
+  },
+  {
+    text: "I dont have any pickup lines in my mind rn. Bc it is full of you!",
+    type: null
+  },
+  {
+    text: "brb just sending your photos to nasa bc your a star!",
     type: null
   }
 ];

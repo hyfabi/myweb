@@ -16,7 +16,7 @@ const icons : Ref = ref([])
 
 onMounted(() => {
 
-  let count : number = Math.random() * 100 +10
+  let count : number = Math.random() * 200 + 30
 
   for (let i = 0; i < count; i++){
     icons.value[i] = {
