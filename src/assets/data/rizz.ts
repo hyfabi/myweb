@@ -1,12 +1,13 @@
 import type RizzRecord from "@/models/Rizz";
 
-export const rizzData : RizzRecord[] = [
+export let rizzData: RizzRecord[];
+rizzData = [
   {
     text: "Are you north korea? Because i can´t leave you!",
     type: null
   },
   {
-    text:"Are you Karl Marx? Cuz your causing an uprising in my lowe class!",
+    text: "Are you Karl Marx? Cuz your causing an uprising in my lowe class!",
     type: "Politcal Rizz"
   },
   {
@@ -94,11 +95,11 @@ export const rizzData : RizzRecord[] = [
     type: "Geaography Rizz"
   },
   {
-    text:"Are you money? Because I need u more then anything!",
+    text: "Are you money? Because I need u more then anything!",
     type: "Broke Rizz"
   },
   {
-    text:"The difference between history and you is that history is the past and you are my future!",
+    text: "The difference between history and you is that history is the past and you are my future!",
     type: "History Rizz"
   },
   {
@@ -126,7 +127,7 @@ export const rizzData : RizzRecord[] = [
     type: "John Cena Rizz"
   },
   {
-    text:"Ima use google no more, bc when i saw you I knew my search was over.",
+    text: "Ima use google no more, bc when i saw you I knew my search was over.",
     type: "Google Rizz"
   },
   {
@@ -146,15 +147,15 @@ export const rizzData : RizzRecord[] = [
     type: "Meatballs Rizz"
   },
   {
-    text:"Are you bedwars cuz id like to have war in bed w u.",
+    text: "Are you bedwars cuz id like to have war in bed w u.",
     type: "Bedwars Rizz"
   },
   {
     text: "Are you a parking ticket? Cuz u got 'fine' written all over you",
-    type:"Parking ticket Rizz"
+    type: "Parking ticket Rizz"
   },
   {
-    text:"Nah Im not 14! Im the 1 4 u!",
+    text: "Nah Im not 14! Im the 1 4 u!",
     type: null
   },
   {
@@ -186,7 +187,7 @@ export const rizzData : RizzRecord[] = [
     type: "Super Mario Rizz"
   },
   {
-    text:"Are you, uhhh, the, the one who, the one who that... Bascically kiss me",
+    text: "Are you, uhhh, the, the one who, the one who that... Bascically kiss me",
     type: "Confused Forgetful Rizz"
   },
   {
@@ -276,5 +277,85 @@ export const rizzData : RizzRecord[] = [
   {
     text: "Are you a shower bcz u make me wet...",
     type: "Girl Rizz"
+  },
+  {
+    text: "Are you a krabby patty formula? bc im tryina steal you",
+    type: "Plankton Rizz"
+  },
+  {
+    text: "I like you! Your cute!",
+    type: "Straight forward rizz"
+  },
+  {
+    text: "Are you youtube? Bc i want you-to-be mine!",
+    type: "Straight forward rizz"
+  },
+  {
+    text: "I dont use rizz pickup lines bc im not tryna pick you up, Im tryna pin you down",
+    type: "Some random rizz"
+  },
+  {
+    text: "Let’s do some math, add the bed, minus the clothes, divided the legs, and hope we don’t multiply",
+    type: "math rizz"
+  },
+  {
+    text: "You may fall from the sky, or you may fall from a tree, but the best way to fall is in love with me",
+    type: "falling Rizz"
+  },
+  {
+    text: "Are you the sun? cause I go red whenever I see you",
+    type: "ginger rizz"
+  },
+  {
+    text: "You can call me Rick asley bc I'm never gonna give you up",
+    type: "rock roll rizz"
+  },
+  {
+    text: "ever heard of hello kitty? bc this kitty saying hello",
+    type: "Kitty rizz"
+  },
+  {
+    text: "your presence alone would make the angels question their own perfection",
+    type: "poetic rizz"
+  },
+  {
+    text: "Im not an artist but I still draw your attention",
+    type: "Art rizz"
+  },
+  {
+    text: "My pick up lines arent smooth but my lips are",
+    type: "smooth rizz"
+  },
+  {
+    text: "Are you the sunshine? Cause you are beautiful",
+    type: "sunshine rizz"
+  },
+  {
+    text:"are you my wallet? cuz i Will protect you from anyone try to steal you from me",
+    type: null
+  },
+  {
+    text: "Rose is a flower...  Just give me a hour and I'll show you my power",
+    type: null
+  },
+  {
+    text: "Is our relationship Elsa cause I can’t let u go",
+    type: "Frozen rizz"
+  },
+  {
+    text: "Are you a keyboard cuz you're my type",
+    type: "Keyboard rizz"
+  },
+  {
+    text: "are you my birthday because I get excited to see you",
+    type: "birthday rizz"
+  },
+  {
+    text:"are u glitter cuz I need ur to shine",
+    type: null
+  },
+  {
+    text: "I dont think I need glasses because I clearly see we're ment to be",
+    type: null
   }
 ];
