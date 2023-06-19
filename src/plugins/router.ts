@@ -47,12 +47,21 @@ const routes : RouteRecordRaw[] = [
     component: () => import('../views/VirtualView.vue')
   },
   {
-    path:'/tanja',
-    component: () => import('../views/TanjaView.vue')
+    path: '/p',
+    children: [
+      {
+        path:'tanja',
+        component: () => import('../views/persons/TanjaView.vue')
+      },
+      {
+        path:'nina',
+        component: () => import('../views/persons/NinaView.vue')
+      },
+    ]
   },
   {
     path:'/me',
-    component: () => import('../views/MeView.vue')
+    component: () => import('../views/persons/MeView.vue')
   }
 ]
 
