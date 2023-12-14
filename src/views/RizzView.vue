@@ -43,6 +43,9 @@ onMounted(() => load(rizzData))
 useHead( {
 	meta: [
 		{
+			property: "og:type",
+			content: "website"
+		},{
 			property: "og:url",
 			content: "https://hyfabi.xyz/rizz"
 		},{
@@ -54,8 +57,6 @@ useHead( {
 		}
 	]
 }, {})
-
-
 
 
 function load(data : RizzRecord[]) : string | null {
