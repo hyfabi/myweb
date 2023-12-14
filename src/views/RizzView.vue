@@ -26,6 +26,7 @@ import {rizzData} from "@/assets/data/rizz";
 import type RizzRecord from "@/models/Rizz";
 import RandomIcons from "@/components/basic/RandomIcons.vue";
 import {useHead, useServerHeadSafe} from "@unhead/vue";
+import {load} from "@/scripts/RizzOG";
 
 const reloads = ref(0)
 
@@ -38,7 +39,7 @@ const display = ref({
 	load(rizzData)
 })*/
 
-onMounted(() => load(rizzData))
+onMounted(() => load(rizzData, display))
 
 useServerHeadSafe( {
 	meta: [
@@ -57,26 +58,6 @@ useServerHeadSafe( {
 		}
 	]
 }, {})
-
-
-export function load(data : RizzRecord[]) : string | null {
-  let id : number | undefined = useRoute()?.params?.id as unknown as number;
-
-  if(id + "" == "" || id == undefined)
-   id = Math.floor(Math.random() * data.length)
-
-  if(id >= data.length || Math.floor(Math.random() * 200) == 69){
-    display.value.text = "Du befindest dich auf meiner Webseite.... Pass auf....Ich sehe dich!"
-    display.value.type = "~Fabian"
-  }else {
-    display.value.text = data[id]?.text
-    if(data[id]?.type != null)
-      display.value.type = `(${data[id]?.type})`;
-    else
-      display.value.type = "??";
-  }
-  return display.value.text
-}
 
 </script>
 

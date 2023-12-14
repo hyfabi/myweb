@@ -7,13 +7,12 @@ import vuetify from 'vite-plugin-vuetify'
 import ogPlugin from 'vite-plugin-open-graph';
 import {rizzData} from "./src/assets/data/rizz";
 
-const x: string = rizzData[Math.floor(Math.random() * rizzData.length)]?.text as string
-
 // https://vitejs.dev/config/
 export default defineConfig({
 	server:{
 		host: "0.0.0.0",
-		port: 80
+		port: 80,
+
 	},
 	plugins: [vue(),
 		vueJsx(),
@@ -25,7 +24,7 @@ export default defineConfig({
 				title: "Test",
 				url: "https://hyfabi.xyz/rizz",
 				type: "website",
-				description: x
+				description: rizzData[Math.floor(Math.random() * rizzData.length)]?.text as string
 			}
 		})
 	],
