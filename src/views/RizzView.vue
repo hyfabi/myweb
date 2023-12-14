@@ -21,10 +21,11 @@
 
 <script setup lang="ts">
 import {useRoute} from "vue-router";
-import {onMounted , ref} from "vue";
+import {onMounted, ref} from "vue";
 import {rizzData} from "@/assets/data/rizz";
 import type RizzRecord from "@/models/Rizz";
 import RandomIcons from "@/components/basic/RandomIcons.vue";
+import {useHead} from "@unhead/vue";
 
 const reloads = ref(0)
 
@@ -33,11 +34,31 @@ const display = ref({
   type: "..."
 })
 
-onMounted(()=>{
-  load(rizzData)
-})
+/*onBeforeMount(()=>{
+	load(rizzData)
+})*/
 
-function load(data : RizzRecord[]) {
+onMounted(() => load(rizzData))
+
+useHead( {
+	meta: [
+		{
+			property: "og:url",
+			content: "https://hyfabi.xyz/rizz"
+		},{
+			property: "og:title",
+			content: "Rizz of todayy: (I stole it)"
+		},{
+			property: "og:description",
+			content: load(rizzData)
+		}
+	]
+}, {})
+
+
+
+
+function load(data : RizzRecord[]) : string | null {
   let id : number | undefined = useRoute()?.params?.id as unknown as number;
 
   if(id + "" == "" || id == undefined)
@@ -53,6 +74,7 @@ function load(data : RizzRecord[]) {
     else
       display.value.type = "??";
   }
+  return display.value.text
 }
 
 </script>

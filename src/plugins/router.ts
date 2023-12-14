@@ -9,6 +9,7 @@ const routes : RouteRecordRaw[] = [
   {
     path: '/rizz',
     component: () => import('../views/RizzView.vue')
+
   },
   {
     path: '/test',
