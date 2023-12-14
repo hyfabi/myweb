@@ -21,7 +21,7 @@ export default defineConfig({
 		}),
 		ogPlugin({
 			basic: {
-				title: "Test",
+				title: "Rizz of the week (I stole it)",
 				url: "https://hyfabi.xyz/rizz",
 				type: "website",
 				description: rizzData[Math.floor(Math.random() * rizzData.length)]?.text as string

@@ -357,5 +357,9 @@ rizzData = [
   {
     text: "I dont think I need glasses because I clearly see we're ment to be",
     type: null
+  },
+  {
+    text: "Are you a time traveller? Bc I can see you in my future!",
+    type: "Time Travel Rizz"
   }
 ];
