@@ -4,6 +4,10 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vuetify from 'vite-plugin-vuetify'
+import ogPlugin from 'vite-plugin-open-graph';
+import {rizzData} from "./src/assets/data/rizz";
+
+const x: string = rizzData[Math.floor(Math.random() * rizzData.length)]?.text as string
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,9 +15,20 @@ export default defineConfig({
 		host: "0.0.0.0",
 		port: 80
 	},
-	plugins: [vue(), vueJsx(), vuetify({
-		autoImport: true
-	})],
+	plugins: [vue(),
+		vueJsx(),
+		vuetify({
+			autoImport: true
+		}),
+		ogPlugin({
+			basic: {
+				title: "Test",
+				url: "https://hyfabi.xyz/rizz",
+				type: "website",
+				description: x
+			}
+		})
+	],
 	resolve: {
 		alias: {
 		  '@': fileURLToPath(new URL('./src', import.meta.url))

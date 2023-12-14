@@ -25,7 +25,7 @@ import {onMounted, ref} from "vue";
 import {rizzData} from "@/assets/data/rizz";
 import type RizzRecord from "@/models/Rizz";
 import RandomIcons from "@/components/basic/RandomIcons.vue";
-import {useHead} from "@unhead/vue";
+import {useHead, useServerHeadSafe} from "@unhead/vue";
 
 const reloads = ref(0)
 
@@ -40,7 +40,7 @@ const display = ref({
 
 onMounted(() => load(rizzData))
 
-useHead( {
+useServerHeadSafe( {
 	meta: [
 		{
 			property: "og:type",
@@ -59,7 +59,7 @@ useHead( {
 }, {})
 
 
-function load(data : RizzRecord[]) : string | null {
+export function load(data : RizzRecord[]) : string | null {
   let id : number | undefined = useRoute()?.params?.id as unknown as number;
 
   if(id + "" == "" || id == undefined)
