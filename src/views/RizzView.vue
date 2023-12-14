@@ -50,7 +50,7 @@ useHead( {
 			content: "Rizz of todayy: (I stole it)"
 		},{
 			property: "og:description",
-			content: load(rizzData)
+			content: load(rizzData) + "\n ~Fabi"
 		}
 	]
 }, {})

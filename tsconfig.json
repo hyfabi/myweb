@@ -3,9 +3,11 @@
   "compilerOptions": {
     "allowJs": true,
     "baseUrl": ".",
-    "module": "Node16",
     "isolatedModules": false,
     "resolveJsonModule": true,
+    "module": "es2022",
+    "moduleDetection": "auto",
+    "moduleResolution": "Node",
     "paths": {
       "@/*": ["./src/*"]
     },
