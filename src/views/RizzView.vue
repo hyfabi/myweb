@@ -12,7 +12,7 @@
       <span class="mx-auto">~Fabian</span>
     </div>
 
-    <v-btn @click="load(rizzData); reloads++" class="mt-10" color="#111111">
+    <v-btn @click="reload(); reloads++" class="mt-10" color="#111111">
       Give me another one!
     </v-btn>
 
@@ -39,7 +39,12 @@ const display = ref({
 	load(rizzData)
 })*/
 
-onMounted(() => load(rizzData, display))
+function reload() :void {
+  load(rizzData, display)
+  console.debug("Reloaded Rizz")
+}
+
+onMounted(reload )
 
 useServerHeadSafe( {
 	meta: [
