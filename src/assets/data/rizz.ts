@@ -361,5 +361,57 @@ rizzData = [
   {
     text: "Are you a time traveller? Bc I can see you in my future!",
     type: "Time Travel Rizz"
-  }
+  },
+  {
+      text: "Are you a firefighter? Cause you came in hot and left me wet.",
+      type: null
+  },
+  {
+     text: "Is your mom a baker? Cause ur a cutie pie.",
+     type: null
+  },
+  {
+     text: "Do u have a map? Cause i think i get lost in ur eyes.",
+     type: null
+  },
+  {
+   text: "Are you a camera? Cause everytime i look at you... I smile.",
+   type: null
+  },
+  {
+     text: "Du u have a name?... Or can i call you mine?",
+     type: null
+  },
+  {
+     text: "Are you geometry? Cause you look good ar every angle",
+     type: null
+  },
+   {
+      text: "Are you lightning? Bc ur Mc Queen",
+      type: null
+   },
+  {
+     text: "Are you mixed? Bc ur half fine and half mine.",
+     type: "Being mixed rizz"
+  },
+   {
+      text: "Is ur mom an artist? Bc she made a masterpiece.",
+      type: "Artist rizz"
+   },
+   {
+      text: "Are you a door bc u look adorable",
+      type: "Door rizz"
+   },
+   {
+      text: "Im the pen ur the highlighter, I write our future, u make it brighter",
+      type: "Future rizz"
+   },
+   {
+      text: "Hey uhhh.. My phone is missing something. Ur number.",
+      type: "Phone rizz"
+   },
+   {
+      text: "My wifi is 4G but my heart is 4U",
+      type: "Wifi rizz"
+   }
 ];
