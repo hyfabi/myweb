@@ -11,8 +11,7 @@ import {rizzData} from "./src/assets/data/rizz";
 export default defineConfig({
 	server:{
 		host: "0.0.0.0",
-		port: 80,
-
+		port: 3000,
 	},
 	plugins: [vue(),
 		vueJsx(),

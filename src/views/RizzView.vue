@@ -12,7 +12,7 @@
       <span class="mx-auto">~Fabian</span>
     </div>
 
-    <v-btn @click="reload(); reloads++" class="mt-10" color="#111111">
+    <v-btn @click="next()" class="mt-10" color="#111111">
       Give me another one!
     </v-btn>
 
@@ -26,25 +26,49 @@ import {rizzData} from "@/assets/data/rizz";
 import type RizzRecord from "@/models/Rizz";
 import RandomIcons from "@/components/basic/RandomIcons.vue";
 import {useHead, useServerHeadSafe} from "@unhead/vue";
-import {load} from "@/scripts/RizzOG";
+import {load, shuffle} from "@/scripts/RizzOG";
 
 const reloads = ref(0)
 
 const display = ref({
-  text: "...",
-  type: "..."
+  text: "Loading...",
+  type: "Loading..."
 })
 
-/*onBeforeMount(()=>{
-	load(rizzData)
-})*/
+let queue = [];
+
+onMounted(()=>{
+	console.log('myheader mounted');
+	queue = shuffle(rizzData);
+	console.debug("aa", queue);
+	next();
+})
 
 function reload() :void {
   load(rizzData, display)
   console.debug("Reloaded Rizz")
 }
 
-onMounted(reload )
+function next(){
+  let text : string = "??";
+  let type: string = "??";
+
+  if(queue.length == 0){
+  	text = "You have seen all Rizz :("
+  }
+  else if(Math.floor(Math.random() * 200) == 69){
+    text = "Du befindest dich auf meiner Webseite.... Pass auf....Ich sehe dich!"
+    type = "~Fabian"
+  }else {
+    text = queue[0].text;
+    type = queue[0].type ?? "??";
+    queue.shift();
+  }
+  display.value.text = text;
+	display.value.type = type;
+}
+
+
 
 useServerHeadSafe( {
 	meta: [

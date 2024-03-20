@@ -25,5 +25,9 @@ export function load(data : RizzRecord[], display?: Ref<{text: string, type: str
     display.value.type = type
   }
 
-  return text
+  return text;
+}
+
+export function shuffle(arr: RizzRecord[]) : RizzRecord[]{
+  return arr.sort((a, b) => 0.5 - Math.random());
 }
