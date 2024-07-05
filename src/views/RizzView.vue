@@ -66,6 +66,7 @@ function next(){
   }
   display.value.text = text;
 	display.value.type = type;
+  reloads.value = reloads.value +1;
 }
 
 
